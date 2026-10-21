@@ -29,9 +29,8 @@ class="case">` blocks in the `#cases` section — copy one to add another.
 
 ## Photo, leads and SEO files
 
-- **Photo:** upload your headshot to the repo root as `tehseen.jpg` (square or 4:5
-  portrait, under ~300 KB). It shows in the hero and About sections automatically;
-  until then a "TA" monogram is displayed.
+- **Photo:** `tehseen.jpg` (hero) and `tehseen-square.jpg` (About) are in the repo root;
+  replace them with new crops (4:5 and square, under ~300 KB) to change the photo.
 - **Lead form:** by default it opens an email to contact@tehseenarbab.com. To receive
   leads without an email app, create a Formspree / Web3Forms form and paste its URL
   into `FORM_ENDPOINT` at the bottom of `index.html`.

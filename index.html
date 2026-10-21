@@ -251,6 +251,41 @@ img{ max-width: 100%; display: block; }
 .case p{ margin: 0; color: var(--paper-dim); font-size: .98rem; }
 .case-more{ margin-top: auto; padding-top: 22px; }
 
+
+/* case-study rows with graphics */
+.cs{ display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: clamp(26px, 5vw, 72px); align-items: center; padding: 48px 0; border-top: 1px solid var(--line); }
+.cs:last-of-type{ border-bottom: 1px solid var(--line); }
+.cs.flip .cs-text{ order: 2; }
+.cs h3{ font-weight: 340; font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.12; letter-spacing: -.015em; margin: 0 0 16px; }
+.cs p{ margin: 0 0 20px; color: var(--paper-dim); font-size: 1.04rem; max-width: 52ch; }
+.chips{ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: .72rem; }
+.chips li{ border: 1px solid var(--line-2); padding: 6px 11px; color: var(--paper-dim); }
+.cs-viz{ margin: 0; position: relative; background: var(--card); border: 1px solid var(--line); padding: 32px 30px 20px; background-image: linear-gradient(var(--line) 1px, transparent 1px); background-size: 100% 46px; background-position: 0 14px; --accent: var(--lime); }
+.cs-viz.alt{ --accent: var(--rust); }
+.cs-viz figcaption{ font-size: .7rem; color: var(--paper-dim); margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.bars{ display: flex; align-items: flex-end; justify-content: center; gap: clamp(26px, 6vw, 60px); height: 230px; }
+.bar-col{ flex: 0 1 120px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch; text-align: center; }
+.bar{ height: 0; background: repeating-linear-gradient(135deg, rgba(243,238,223,.2) 0 3px, rgba(243,238,223,.07) 3px 9px); border: 1px solid var(--line-2); border-bottom: 0; transition: height 1.1s cubic-bezier(.2,.7,.2,1) .25s; }
+.bar.hi{ background: var(--accent); border-color: var(--accent); box-shadow: 0 0 36px -6px var(--accent); transition-delay: .55s; }
+.in .bar, .no-js .bar{ height: var(--h); }
+.bar-val{ font-size: 1.05rem; margin-bottom: 10px; }
+.bar-lbl{ font-size: .72rem; color: var(--paper-dim); padding-top: 12px; }
+.badge{ position: absolute; top: -16px; right: 18px; background: var(--accent); color: var(--ink); font-size: 1.1rem; padding: 7px 13px; transform: rotate(3deg); }
+.flow{ list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 0; }
+.flow li{ position: relative; display: grid; grid-template-columns: 38px 1fr; column-gap: 12px; align-items: baseline; padding: 15px 16px; border: 1px solid var(--line-2); background: var(--ink); }
+.flow li + li{ margin-top: 22px; }
+.flow li + li::before{ content: "↓"; position: absolute; top: -21px; left: 22px; color: var(--paper-dim); font-size: .95rem; }
+.flow .fn{ color: var(--paper-dim); font-size: .8rem; grid-row: span 2; }
+.flow b{ font-weight: 500; font-size: .95rem; }
+.flow small{ color: var(--paper-dim); font-size: .72rem; }
+.flow li.win{ border-color: var(--lime); box-shadow: 0 0 30px -10px var(--lime); }
+.flow li.win b{ color: var(--lime); }
+.trend{ width: 100%; height: 62px; margin-top: 22px; color: var(--lime); display: block; overflow: visible; }
+@media (max-width: 980px){
+  .cs{ grid-template-columns: 1fr; padding: 38px 0; }
+  .cs.flip .cs-text{ order: 0; }
+}
+
 /* about */
 .about-grid{ display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: clamp(30px, 6vw, 90px); align-items: start; }
 .about-portrait{ aspect-ratio: 1; max-width: 360px; border: 1px solid var(--line-2); overflow: hidden; position: relative; background: var(--card); }
@@ -351,6 +386,7 @@ img{ max-width: 100%; display: block; }
 }
 </style>
 <script>document.documentElement.className += " js";</script>
+<noscript><style>.bar{height:var(--h)}</style></noscript>
 </head>
 <body>
 
@@ -492,26 +528,62 @@ img{ max-width: 100%; display: block; }
       <span class="kicker mono reveal">04 / Results</span>
       <h2 class="section-head reveal">Case studies</h2>
       <p class="section-lede reveal">Real brands, real numbers — retention work that shows up in revenue.</p>
-      <div class="cases-grid">
-        <article class="case reveal">
-          <span class="case-tag mono lime">Retention lead</span>
-          <h3>DTC supplement brand</h3>
-          <span class="case-metric mono lime">$500K → $700K/mo</span>
-          <p>Owned the retention program and grew the monthly revenue run-rate from roughly $500K to $700K through flow rebuilds, segmentation and reorder-timed campaigns.</p>
-        </article>
-        <article class="case reveal">
-          <span class="case-tag mono rust">Retention &amp; lifecycle</span>
-          <h3>US coffee brand</h3>
-          <span class="case-metric mono rust">$15K → $30K</span>
-          <p>Rebuilt the lifecycle program and helped scale revenue from $15K to $30K, applying the same reorder-timing logic used for consumable products.</p>
-        </article>
-        <article class="case reveal">
-          <span class="case-tag mono lime">Retention strategy</span>
-          <h3>Clearer</h3>
-          <span class="case-metric mono none">Lower churn, higher retention</span>
-          <p>Started with a full audit of Clearer's Klaviyo setup, then went beyond it to rebuild the lifecycle strategy itself — increasing retention and bringing churn down.</p>
-        </article>
-      </div>
+
+      <article class="cs reveal">
+        <div class="cs-text">
+          <span class="case-tag mono lime">Retention lead · DTC supplements</span>
+          <h3>From $500K to $700K a month</h3>
+          <p>Owned the retention program for a direct-to-consumer supplement brand and grew the monthly revenue run-rate by roughly 40% through flow rebuilds, segmentation and reorder-timed campaigns.</p>
+          <ul class="chips mono"><li>Flow rebuilds</li><li>Segmentation</li><li>Reorder-timed campaigns</li></ul>
+        </div>
+        <figure class="cs-viz" aria-label="Bar chart: monthly revenue run-rate grew from about $500K to about $700K">
+          <div class="bars">
+            <div class="bar-col"><span class="bar-val mono">~$500K</span><div class="bar" style="--h:71%"></div><span class="bar-lbl mono">Before</span></div>
+            <div class="bar-col"><span class="bar-val mono lime">~$700K</span><div class="bar hi" style="--h:100%"></div><span class="bar-lbl mono">After</span></div>
+          </div>
+          <span class="badge mono">+40%</span>
+          <figcaption class="mono">Monthly revenue run-rate</figcaption>
+        </figure>
+      </article>
+
+      <article class="cs flip reveal">
+        <div class="cs-text">
+          <span class="case-tag mono rust">Retention &amp; lifecycle · US coffee</span>
+          <h3>Revenue doubled, $15K to $30K</h3>
+          <p>Rebuilt the lifecycle program for a US-based coffee brand and helped scale revenue from $15K to $30K, applying the same reorder-timing logic used for consumable products.</p>
+          <ul class="chips mono"><li>Lifecycle rebuild</li><li>Reorder timing</li><li>Consumable-product logic</li></ul>
+        </div>
+        <figure class="cs-viz alt" aria-label="Bar chart: revenue doubled from $15K to $30K">
+          <div class="bars">
+            <div class="bar-col"><span class="bar-val mono">$15K</span><div class="bar" style="--h:50%"></div><span class="bar-lbl mono">Before</span></div>
+            <div class="bar-col"><span class="bar-val mono rust">$30K</span><div class="bar hi" style="--h:100%"></div><span class="bar-lbl mono">After</span></div>
+          </div>
+          <span class="badge mono">2×</span>
+          <figcaption class="mono">Revenue during the engagement</figcaption>
+        </figure>
+      </article>
+
+      <article class="cs reveal">
+        <div class="cs-text">
+          <span class="case-tag mono lime">Retention strategy · Clearer</span>
+          <h3>Audit first, then a rebuilt lifecycle</h3>
+          <p>Started with a full audit of Clearer's Klaviyo setup, then went beyond it to rebuild the lifecycle strategy itself — increasing customer retention and bringing the churn rate down.</p>
+          <ul class="chips mono"><li>Klaviyo audit</li><li>Lifecycle strategy</li><li>Churn reduction</li></ul>
+        </div>
+        <figure class="cs-viz" aria-label="Process diagram: Klaviyo audit, lifecycle rebuild, higher retention and lower churn">
+          <ol class="flow mono">
+            <li><span class="fn">01</span><b>Klaviyo audit</b><small>Find the gaps</small></li>
+            <li><span class="fn">02</span><b>Lifecycle rebuild</b><small>New strategy</small></li>
+            <li class="win"><span class="fn">03</span><b>Retention up</b><small>Churn down</small></li>
+          </ol>
+          <svg class="trend" viewBox="0 0 300 70" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 8 C60 10 90 20 140 38 S240 62 300 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M0 8 C60 10 90 20 140 38 S240 62 300 64 L300 70 L0 70Z" fill="currentColor" opacity=".12"/>
+          </svg>
+          <figcaption class="mono">Illustrative — churn trending down</figcaption>
+        </figure>
+      </article>
+
       <div class="section-cta reveal"><a class="btn btn-primary" href="#contact">Want results like these? Start with a free audit <span class="arr">→</span></a></div>
     </div>
   </section>
@@ -522,7 +594,7 @@ img{ max-width: 100%; display: block; }
       <div class="reveal">
         <div class="about-portrait">
           <div class="monogram" aria-hidden="true">TA</div>
-          <img src="tehseen.jpg" alt="Portrait of Tehseen Arbab" width="720" height="720" loading="lazy" onerror="this.remove()">
+          <img src="tehseen-square.jpg" alt="Portrait of Tehseen Arbab" width="720" height="720" loading="lazy" onerror="this.remove()">
         </div>
       </div>
       <div>
