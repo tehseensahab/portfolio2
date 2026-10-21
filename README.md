@@ -31,8 +31,8 @@ class="case">` blocks in the `#cases` section — copy one to add another.
 
 - **Photo:** `tehseen.jpg` (hero) and `tehseen-square.jpg` (About) are in the repo root;
   replace them with new crops (4:5 and square, under ~300 KB) to change the photo.
-- **Lead form:** by default it opens an email to contact@tehseenarbab.com. To receive
-  leads without an email app, create a Formspree / Web3Forms form and paste its URL
-  into `FORM_ENDPOINT` at the bottom of `index.html`.
+- **Lead form:** submissions post to the Formspree form set in `FORM_ENDPOINT` at the
+  bottom of `index.html` and arrive by email. Set it to `""` to fall back to a mailto
+  link.
 - **SEO:** `robots.txt`, `sitemap.xml` and `og-image.png` (link-preview card) are
   served from the site root. Submit `https://tehseenarbab.com/sitemap.xml` in GSC.
