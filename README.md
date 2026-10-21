@@ -26,3 +26,14 @@ file and push; don't rename it.
 Everything is in one file, top to bottom in this order: hero, "why me",
 services, case studies, tools, contact. Case studies are `<article
 class="case">` blocks in the `#cases` section — copy one to add another.
+
+## Photo, leads and SEO files
+
+- **Photo:** upload your headshot to the repo root as `tehseen.jpg` (square or 4:5
+  portrait, under ~300 KB). It shows in the hero and About sections automatically;
+  until then a "TA" monogram is displayed.
+- **Lead form:** by default it opens an email to contact@tehseenarbab.com. To receive
+  leads without an email app, create a Formspree / Web3Forms form and paste its URL
+  into `FORM_ENDPOINT` at the bottom of `index.html`.
+- **SEO:** `robots.txt`, `sitemap.xml` and `og-image.png` (link-preview card) are
+  served from the site root. Submit `https://tehseenarbab.com/sitemap.xml` in GSC.
