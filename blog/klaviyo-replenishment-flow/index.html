@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klaviyo Replenishment Flow: Time Reorder Emails to Product Usage</title>
+<meta name="description" content="Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.">
+<link rel="canonical" href="https://tehseenarbab.com/blog/klaviyo-replenishment-flow/">
+<meta name="author" content="Tehseen Arbab">
+<meta name="theme-color" content="#131109">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tehseen Arbab">
+<meta property="og:title" content="Klaviyo Replenishment Flow: Time Reorder Emails to Product Usage">
+<meta property="og:description" content="Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.">
+<meta property="og:url" content="https://tehseenarbab.com/blog/klaviyo-replenishment-flow/">
+<meta property="og:image" content="https://tehseenarbab.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Klaviyo Replenishment Flow: Time Reorder Emails to Product Usage">
+<meta name="twitter:description" content="Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.">
+<meta name="twitter:image" content="https://tehseenarbab.com/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131109'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23D4F24E' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "How to build a Klaviyo replenishment flow that matches how fast customers actually run out", "description": "Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://tehseenarbab.com/blog/klaviyo-replenishment-flow/", "image": "https://tehseenarbab.com/og-image.png", "author": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/", "sameAs": ["https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/"]}, "publisher": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tehseenarbab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tehseenarbab.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to build a Klaviyo replenishment flow that matches how fast customers actually run out", "item": "https://tehseenarbab.com/blog/klaviyo-replenishment-flow/"}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span></a>
+<nav class="topnav" id="topnav" aria-label="Main navigation">
+<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/blog/">Blog</a><a href="/#about">About</a>
+<a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a>
+<a href="/#contact" class="btn btn-primary">Free retention audit</a>
+</nav>
+<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">Menu</button>
+</div></header>
+
+<main class="page"><div class="wrap">
+<p class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Klaviyo</p>
+<div class="post-head">
+<span class="kicker">Klaviyo</span>
+<h1>How to build a Klaviyo replenishment flow that matches how fast customers actually run out</h1>
+<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span>·</span><time datetime="2026-10-23">Oct 23, 2026</time><span>·</span><span>9 min read</span></div>
+</div>
+<div class="layout">
+<article class="prose">
+<p class="lede">A replenishment flow reminds customers to reorder shortly before they run out. Done well, it is the highest-leverage flow a supplement or coffee brand can build, because it meets a need the customer already has.</p>
+
+<h2 id="step-1-calculate-days-of-supply-for-every-product">Step 1: calculate days of supply for every product</h2>
+<p>Start with a simple formula:</p>
+<p class="formula">Days of supply = units in the package ÷ units used per day</p>
+<p>A bottle of 60 capsules taken twice a day lasts 30 days. A bottle of 60 capsules taken once a day lasts 60. Put every product and size into a small table:</p>
+<table>
+<thead><tr><th>Product</th><th>Typical days of supply</th><th>First reminder</th><th>Second reminder</th></tr></thead>
+<tbody>
+<tr><td>30-day supplement bottle</td><td>30</td><td>Day 21–24</td><td>Day 30</td></tr>
+<tr><td>90-day supplement bottle</td><td>90</td><td>Day 70–75</td><td>Day 90</td></tr>
+<tr><td>12 oz coffee bag (illustrative)</td><td>14–21</td><td>Day 10–14</td><td>Day 18–21</td></tr>
+</tbody></table>
+<p class="note">These timings are starting points, not benchmarks. Your own data, and your A/B tests, decide the final numbers.</p>
+
+<h2 id="step-2-choose-the-trigger-and-handle-multi-product-orders">Step 2: choose the trigger and handle multi-product orders</h2>
+<p>The usual trigger is <strong>Placed Order</strong>. Create separate flows (or splits) per product or per product group, using the products in the order to decide which timing applies. If an order contains items with different durations, base the timing on the item that runs out first, or the highest-value item, and be consistent.</p>
+<p>Treat first orders and repeat orders differently. A first-time buyer is still learning the product and may use it unevenly, so a slightly later and softer first reminder often works better than the same message sent to a long-term customer.</p>
+
+<h2 id="step-3-exclude-people-who-do-not-need-the-email">Step 3: exclude people who do not need the email</h2>
+<ul>
+<li><strong>Active subscribers.</strong> They will be shipped automatically; a "reorder now" email is noise and can confuse them. Exclude them with a segment or profile property synced from your subscription app.</li>
+<li><strong>Customers who already reordered.</strong> Use a flow filter such as "has not placed an order since entering this flow" so someone who ordered early stops receiving reminders.</li>
+<li><strong>Recent refund or support cases.</strong> Do not send a reorder reminder to someone who just asked for their money back.</li>
+</ul>
+
+<h2 id="step-4-write-a-short-sequence">Step 4: write a short sequence</h2>
+<ol>
+<li><strong>Heads-up (before run-out).</strong> Friendly, practical, one clear button to reorder. No discount.</li>
+<li><strong>Run-out day.</strong> Reinforce urgency and make reordering a one-click action. For one-time buyers, offer the subscription as a convenience ("never run out").</li>
+<li><strong>Gentle follow-up (after run-out).</strong> Acknowledge that they may have run out and offer help, such as a different size or a flexible subscription. If you use an incentive at all, hold it for this last step.</li>
+</ol>
+
+<h2 id="step-5-cross-check-with-klaviyo-s-predictions">Step 5: cross-check with Klaviyo's predictions</h2>
+<p>Klaviyo can calculate a predicted next order date for ecommerce customers once your account has enough order history. Use it as a sanity check against your product-based timing, or as a way to fill in the gaps for customers who buy irregularly. Product knowledge should lead; the prediction supports it.</p>
+
+<h2 id="step-6-measure-the-right-things">Step 6: measure the right things</h2>
+<ul>
+<li><strong>Second-order rate within a window</strong> tied to the product (for example, within 1.5× the days of supply).</li>
+<li><strong>Revenue per recipient</strong> rather than open rate.</li>
+<li><strong>Time to second order</strong> before and after launch.</li>
+<li><strong>Subscription conversion</strong> from the run-out email.</li>
+</ul>
+<p>Test one variable at a time: timing first, then offer, then creative. See the <a href="/blog/dtc-retention-marketing-guide/">full retention playbook</a> for where this flow fits, and <a href="/blog/ltv-cohort-retention-curves/">how to read cohort curves</a> to confirm the lift is real.</p>
+<aside class="cta-box">
+<p class="cta-title">Want a replenishment flow built around your products?</p>
+<p>I'll review your Klaviyo flows, segments and subscription setup and send back the highest-impact fixes — free, no obligation.</p>
+<p><a class="btn btn-primary" href="/#contact">Get your free retention audit <span class="arr">→</span></a> <a class="btn btn-ghost" href="https://cal.com/tehseenarbab/15min" target="_blank" rel="noopener">Book a 15-min call</a></p>
+</aside>
+
+<div class="author"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="96" height="96" loading="lazy"><div>
+<h3>Tehseen Arbab</h3>
+<p>Retention and lifecycle marketer for DTC supplement and coffee brands. I led retention for a supplement brand whose monthly run-rate grew from about $500K to $700K, and I work in Klaviyo, Skio, Recharge, Meta Ads and Shopify.</p>
+<p><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">Connect on LinkedIn</a> · <a href="/#contact">Get a free audit</a></p></div></div>
+</article>
+<aside class="side">
+<nav class="toc" aria-label="Table of contents"><b>On this page</b><a href="#step-1-calculate-days-of-supply-for-every-product">Step 1: calculate days of supply for every product</a><a href="#step-2-choose-the-trigger-and-handle-multi-product-orders">Step 2: choose the trigger and handle multi-product orders</a><a href="#step-3-exclude-people-who-do-not-need-the-email">Step 3: exclude people who do not need the email</a><a href="#step-4-write-a-short-sequence">Step 4: write a short sequence</a><a href="#step-5-cross-check-with-klaviyo-s-predictions">Step 5: cross-check with Klaviyo&#x27;s predictions</a><a href="#step-6-measure-the-right-things">Step 6: measure the right things</a></nav>
+<div class="side-card"><p>Get a free review of your Klaviyo flows and subscription setup.</p><a class="btn btn-primary" href="/#contact">Free retention audit →</a></div>
+</aside>
+</div>
+<section class="related"><h2>Keep reading</h2><div class="cards"><a class="card" href="/blog/dtc-retention-marketing-guide/"><span class="k">Pillar guide</span><h3>DTC retention marketing: the playbook for supplement and coffee brands</h3><p>A practical retention marketing playbook for DTC brands that sell consumables: replenishment timing, subscriptions, Klaviyo lifecycle flows and the metrics that prove it works.</p><span class="r">11 min read →</span></a><a class="card" href="/blog/subscription-cancel-flow-save-offers/"><span class="k">Subscriptions</span><h3>How to build a subscription cancel flow that reduces churn without trapping customers</h3><p>Design a cancel flow for DTC subscriptions: reason-based save offers, skip and swap options, margin guardrails, pre-renewal reminders and how to measure saves that actually last.</p><span class="r">8 min read →</span></a><a class="card" href="/blog/ltv-cohort-retention-curves/"><span class="k">Analytics</span><h3>LTV and cohort retention curves: how DTC brands should read them</h3><p>Learn to build and read cohort retention tables for DTC brands: repeat rate, payback period, LTV formula and the mistakes that make blended averages misleading.</p><span class="r">8 min read →</span></a></div></section>
+</div></main>
+<footer class="foot"><div class="foot-in wrap">
+<span>© 2026 Tehseen Arbab — Bahawalpur, Pakistan</span>
+<span><a href="/">Home</a><a href="/blog/">Blog</a><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a><a href="mailto:contact@tehseenarbab.com">Email</a></span>
+</div></footer>
+<script>
+(function(){var t=document.querySelector(".nav-toggle"),n=document.getElementById("topnav");
+t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.textContent=o?"Close":"Menu"});
+n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="Menu"})});})();
+</script>
+</body>
+</html>

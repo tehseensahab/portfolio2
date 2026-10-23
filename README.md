@@ -36,3 +36,9 @@ class="case">` blocks in the `#cases` section — copy one to add another.
   link.
 - **SEO:** `robots.txt`, `sitemap.xml` and `og-image.png` (link-preview card) are
   served from the site root. Submit `https://tehseenarbab.com/sitemap.xml` in GSC.
+
+## Blog
+
+Static pages live in `blog/<slug>/index.html` and share `blog/blog.css`. To add a post,
+copy an existing post folder, edit the text, title, description, canonical URL, JSON-LD
+dates, and add the URL to `sitemap.xml` and the "Keep reading" cards.
