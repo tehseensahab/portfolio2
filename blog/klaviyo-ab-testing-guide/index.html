@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klaviyo A/B Testing: How to Run Email Tests That Mean Something</title>
+<meta name="description" content="A practical guide to A/B testing emails in Klaviyo: what to test, sample size, choosing a winning metric, testing flows and avoiding common mistakes.">
+<link rel="canonical" href="https://tehseenarbab.com/blog/klaviyo-ab-testing-guide/">
+<meta name="author" content="Tehseen Arbab">
+<meta name="theme-color" content="#131109">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tehseen Arbab">
+<meta property="og:title" content="Klaviyo A/B Testing: How to Run Email Tests That Mean Something">
+<meta property="og:description" content="A practical guide to A/B testing emails in Klaviyo: what to test, sample size, choosing a winning metric, testing flows and avoiding common mistakes.">
+<meta property="og:url" content="https://tehseenarbab.com/blog/klaviyo-ab-testing-guide/">
+<meta property="og:image" content="https://tehseenarbab.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Klaviyo A/B Testing: How to Run Email Tests That Mean Something">
+<meta name="twitter:description" content="A practical guide to A/B testing emails in Klaviyo: what to test, sample size, choosing a winning metric, testing flows and avoiding common mistakes.">
+<meta name="twitter:image" content="https://tehseenarbab.com/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131109'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23D4F24E' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Klaviyo A/B testing: how to run email tests that actually tell you something", "description": "A practical guide to A/B testing emails in Klaviyo: what to test, sample size, choosing a winning metric, testing flows and avoiding common mistakes.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://tehseenarbab.com/blog/klaviyo-ab-testing-guide/", "image": "https://tehseenarbab.com/og-image.png", "author": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/", "sameAs": ["https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/"]}, "publisher": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tehseenarbab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tehseenarbab.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Klaviyo A/B testing: how to run email tests that actually tell you something", "item": "https://tehseenarbab.com/blog/klaviyo-ab-testing-guide/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What should I A/B test in email marketing?", "acceptedAnswer": {"@type": "Answer", "text": "Start with elements that change behavior: the offer, timing, the call to action and the main message. Subject lines and send times are fine too, but judge them on clicks or revenue, not opens."}}, {"@type": "Question", "name": "How long should an email A/B test run?", "acceptedAnswer": {"@type": "Answer", "text": "Long enough to reach a meaningful number of recipients and conversions in each variant. Small lists need longer tests or bigger changes to show a real difference."}}, {"@type": "Question", "name": "Can I A/B test flows in Klaviyo?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can split a flow into variants and compare performance over time, which suits tests of timing, content or offers."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span></a>
+<nav class="topnav" id="topnav" aria-label="Main navigation">
+<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/blog/">Blog</a><a href="/#about">About</a>
+<a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a>
+<a href="/#contact" class="btn btn-primary">Free retention audit</a>
+</nav>
+<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">Menu</button>
+</div></header>
+
+<main class="page"><div class="wrap">
+<p class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Klaviyo</p>
+<div class="post-head">
+<span class="kicker">Klaviyo</span>
+<h1>Klaviyo A/B testing: how to run email tests that actually tell you something</h1>
+<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span>·</span><time datetime="2026-10-23">Oct 23, 2026</time><span>·</span><span>7 min read</span></div>
+</div>
+<div class="layout">
+<article class="prose">
+<p class="lede">Most email tests are inconclusive because the sample is too small, the change is too minor or the wrong metric picks the winner. A simple discipline fixes all three.</p>
+
+<h2 id="1-start-with-a-hypothesis">1. Start with a hypothesis</h2>
+<p>Write one sentence: "If we do X, then Y will improve because Z." For example: "If we send the replenishment reminder 7 days before run-out instead of on run-out day, the second-order rate will rise because customers have time to act."</p>
+
+<h2 id="2-test-one-variable">2. Test one variable</h2>
+<p>Change a single thing at a time: timing, offer, headline, call to action, layout. If you change several, you will not know what caused the result.</p>
+
+<h2 id="3-pick-a-metric-that-matters">3. Pick a metric that matters</h2>
+<ul>
+<li>Prefer <strong>clicks, conversion or revenue per recipient</strong> to opens, which are distorted (<a href="/blog/email-open-rate-benchmarks/">why</a>).</li>
+<li>For flows, the real outcome is often the <strong>second-order rate</strong>.</li>
+</ul>
+
+<h2 id="4-mind-sample-size">4. Mind sample size</h2>
+<p>With a small audience, small differences are noise. Either run the test longer, accumulate results across sends, or test bolder changes whose effect is large enough to see.</p>
+
+<h2 id="5-test-in-campaigns-and-in-flows">5. Test in campaigns and in flows</h2>
+<p>Campaign tests give quick answers about subject lines and creative. Flow tests pay off for longer because every future subscriber passes through the winner. Good flow tests to start with: reminder timing in the <a href="/blog/klaviyo-replenishment-flow/">replenishment flow</a>, the number of emails in a <a href="/blog/welcome-email-series-ecommerce/">welcome series</a>, and the point at which you introduce an offer.</p>
+
+<h2 id="6-log-every-test">6. Log every test</h2>
+<p>Keep a simple table: date, hypothesis, variants, audience, metric, result, decision. After a few months it becomes your best playbook.</p>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Declaring a winner after a few hours or a handful of clicks.</li>
+<li>Testing tiny cosmetic changes on a small list.</li>
+<li>Choosing the winner by open rate.</li>
+<li>Rolling out a winner without checking unsubscribes and complaints.</li>
+</ul>
+<h2 id="quick-answers">Quick answers</h2><h3>What should I A/B test in email marketing?</h3><p>Start with elements that change behavior: the offer, timing, the call to action and the main message. Subject lines and send times are fine too, but judge them on clicks or revenue, not opens.</p><h3>How long should an email A/B test run?</h3><p>Long enough to reach a meaningful number of recipients and conversions in each variant. Small lists need longer tests or bigger changes to show a real difference.</p><h3>Can I A/B test flows in Klaviyo?</h3><p>Yes. You can split a flow into variants and compare performance over time, which suits tests of timing, content or offers.</p><aside class="cta-box">
+<p class="cta-title">Want a testing roadmap for your flows?</p>
+<p>I'll review your Klaviyo flows, segments and subscription setup and send back the highest-impact fixes — free, no obligation.</p>
+<p><a class="btn btn-primary" href="/#contact">Get your free retention audit <span class="arr">→</span></a> <a class="btn btn-ghost" href="https://cal.com/tehseenarbab/15min" target="_blank" rel="noopener">Book a 15-min call</a></p>
+</aside>
+
+<div class="author"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="96" height="96" loading="lazy"><div>
+<h3>Tehseen Arbab</h3>
+<p>Retention and lifecycle marketer for DTC supplement and coffee brands. I led retention for a supplement brand whose monthly run-rate grew from about $500K to $700K, and I work in Klaviyo, Skio, Recharge, Meta Ads and Shopify.</p>
+<p><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">Connect on LinkedIn</a> · <a href="/#contact">Get a free audit</a></p></div></div>
+</article>
+<aside class="side">
+<nav class="toc" aria-label="Table of contents"><b>On this page</b><a href="#1-start-with-a-hypothesis">1. Start with a hypothesis</a><a href="#2-test-one-variable">2. Test one variable</a><a href="#3-pick-a-metric-that-matters">3. Pick a metric that matters</a><a href="#4-mind-sample-size">4. Mind sample size</a><a href="#5-test-in-campaigns-and-in-flows">5. Test in campaigns and in flows</a><a href="#6-log-every-test">6. Log every test</a><a href="#common-mistakes">Common mistakes</a><a href="#quick-answers">Quick answers</a></nav>
+<div class="side-card"><p>Get a free review of your Klaviyo flows and subscription setup.</p><a class="btn btn-primary" href="/#contact">Free retention audit →</a></div>
+</aside>
+</div>
+<section class="related"><h2>Keep reading</h2><div class="cards"><a class="card" href="/blog/email-open-rate-benchmarks/"><span class="k">Email marketing</span><h3>What is a good email open rate, and why you should stop relying on it</h3><p>Open rates are inflated by Apple Mail Privacy Protection. Learn what to measure instead: click rate, conversion, revenue per recipient and list health for ecommerce email.</p><span class="r">6 min read →</span></a><a class="card" href="/blog/klaviyo-replenishment-flow/"><span class="k">Klaviyo</span><h3>How to build a Klaviyo replenishment flow that matches how fast customers actually run out</h3><p>Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.</p><span class="r">9 min read →</span></a><a class="card" href="/blog/welcome-email-series-ecommerce/"><span class="k">Email marketing</span><h3>Welcome email series for ecommerce: what to send and when</h3><p>How to design an ecommerce welcome email series: the purpose of each email, timing, content ideas for supplement and coffee brands, and how to measure whether it works.</p><span class="r">7 min read →</span></a></div></section>
+</div></main>
+<footer class="foot"><div class="foot-in wrap">
+<span>© 2026 Tehseen Arbab — Bahawalpur, Pakistan</span>
+<span><a href="/">Home</a><a href="/blog/">Blog</a><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a><a href="mailto:contact@tehseenarbab.com">Email</a></span>
+</div></footer>
+<script>
+(function(){var t=document.querySelector(".nav-toggle"),n=document.getElementById("topnav");
+t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.textContent=o?"Close":"Menu"});
+n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="Menu"})});})();
+</script>
+</body>
+</html>
