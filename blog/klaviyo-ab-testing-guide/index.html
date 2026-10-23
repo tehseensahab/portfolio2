@@ -7,7 +7,7 @@
 <meta name="description" content="A practical guide to A/B testing emails in Klaviyo: what to test, sample size, choosing a winning metric, testing flows and avoiding common mistakes.">
 <link rel="canonical" href="https://tehseenarbab.com/blog/klaviyo-ab-testing-guide/">
 <meta name="author" content="Tehseen Arbab">
-<meta name="theme-color" content="#131109">
+<meta name="theme-color" content="#F4EFE4">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Tehseen Arbab">
 <meta property="og:title" content="Klaviyo A/B Testing: How to Run Email Tests That Mean Something">
@@ -18,30 +18,32 @@
 <meta name="twitter:title" content="Klaviyo A/B Testing: How to Run Email Tests That Mean Something">
 <meta name="twitter:description" content="A practical guide to A/B testing emails in Klaviyo: what to test, sample size, choosing a winning metric, testing flows and avoiding common mistakes.">
 <meta name="twitter:image" content="https://tehseenarbab.com/og-image.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131109'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23D4F24E' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231D4A37'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23F4EFE4' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Klaviyo A/B testing: how to run email tests that actually tell you something", "description": "A practical guide to A/B testing emails in Klaviyo: what to test, sample size, choosing a winning metric, testing flows and avoiding common mistakes.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://tehseenarbab.com/blog/klaviyo-ab-testing-guide/", "image": "https://tehseenarbab.com/og-image.png", "author": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/", "sameAs": ["https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/"]}, "publisher": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tehseenarbab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tehseenarbab.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Klaviyo A/B testing: how to run email tests that actually tell you something", "item": "https://tehseenarbab.com/blog/klaviyo-ab-testing-guide/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What should I A/B test in email marketing?", "acceptedAnswer": {"@type": "Answer", "text": "Start with elements that change behavior: the offer, timing, the call to action and the main message. Subject lines and send times are fine too, but judge them on clicks or revenue, not opens."}}, {"@type": "Question", "name": "How long should an email A/B test run?", "acceptedAnswer": {"@type": "Answer", "text": "Long enough to reach a meaningful number of recipients and conversions in each variant. Small lists need longer tests or bigger changes to show a real difference."}}, {"@type": "Question", "name": "Can I A/B test flows in Klaviyo?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can split a flow into variants and compare performance over time, which suits tests of timing, content or offers."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/base.css">
 <link rel="stylesheet" href="/blog/blog.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span></a>
+<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span><span class="brand-name">Tehseen Arbab</span></a>
 <nav class="topnav" id="topnav" aria-label="Main navigation">
-<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/blog/">Blog</a><a href="/#about">About</a>
+<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/#about">About</a><a href="/blog/">Blog</a>
 <a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a>
 <a href="/#contact" class="btn btn-primary">Free retention audit</a>
 </nav>
-<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">Menu</button>
+<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu"><span></span><span></span></button>
 </div></header>
 
-<main class="page"><div class="wrap">
+<main class="page" id="main"><div class="wrap">
 <p class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Klaviyo</p>
 <div class="post-head">
 <span class="kicker">Klaviyo</span>
 <h1>Klaviyo A/B testing: how to run email tests that actually tell you something</h1>
-<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span>·</span><time datetime="2026-10-23">Oct 23, 2026</time><span>·</span><span>7 min read</span></div>
+<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span class="sep">·</span><time datetime="2026-10-23">Oct 23, 2026</time><span class="sep">·</span><span>7 min read</span></div>
 </div>
 <div class="layout">
 <article class="prose">
@@ -94,13 +96,17 @@
 <section class="related"><h2>Keep reading</h2><div class="cards"><a class="card" href="/blog/email-open-rate-benchmarks/"><span class="k">Email marketing</span><h3>What is a good email open rate, and why you should stop relying on it</h3><p>Open rates are inflated by Apple Mail Privacy Protection. Learn what to measure instead: click rate, conversion, revenue per recipient and list health for ecommerce email.</p><span class="r">6 min read →</span></a><a class="card" href="/blog/klaviyo-replenishment-flow/"><span class="k">Klaviyo</span><h3>How to build a Klaviyo replenishment flow that matches how fast customers actually run out</h3><p>Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.</p><span class="r">9 min read →</span></a><a class="card" href="/blog/welcome-email-series-ecommerce/"><span class="k">Email marketing</span><h3>Welcome email series for ecommerce: what to send and when</h3><p>How to design an ecommerce welcome email series: the purpose of each email, timing, content ideas for supplement and coffee brands, and how to measure whether it works.</p><span class="r">7 min read →</span></a></div></section>
 </div></main>
 <footer class="foot"><div class="foot-in wrap">
-<span>© 2026 Tehseen Arbab — Bahawalpur, Pakistan</span>
+<span class="fl">Tehseen Arbab</span>
 <span><a href="/">Home</a><a href="/blog/">Blog</a><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a><a href="mailto:contact@tehseenarbab.com">Email</a></span>
+<span>© 2026 · Bahawalpur, Pakistan</span>
 </div></footer>
 <script>
 (function(){var t=document.querySelector(".nav-toggle"),n=document.getElementById("topnav");
-t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.textContent=o?"Close":"Menu"});
-n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="Menu"})});})();
+function set(o){n.classList.toggle("open",o);t.setAttribute("aria-expanded",o?"true":"false");document.body.style.overflow=o?"hidden":""}
+t.addEventListener("click",function(){set(!n.classList.contains("open"))});
+n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){set(false)})});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
+window.addEventListener("resize",function(){if(innerWidth>820)set(false)});})();
 </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <meta name="description" content="A step-by-step Klaviyo setup guide for Shopify: connect the integration, authenticate your domain, add consent forms and launch welcome, abandoned cart, browse, post-purchase and win-back flows.">
 <link rel="canonical" href="https://tehseenarbab.com/blog/klaviyo-setup-shopify-first-flows/">
 <meta name="author" content="Tehseen Arbab">
-<meta name="theme-color" content="#131109">
+<meta name="theme-color" content="#F4EFE4">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Tehseen Arbab">
 <meta property="og:title" content="How to Set Up Klaviyo for a Shopify Store: The First 5 Flows to Build">
@@ -18,30 +18,32 @@
 <meta name="twitter:title" content="How to Set Up Klaviyo for a Shopify Store: The First 5 Flows to Build">
 <meta name="twitter:description" content="A step-by-step Klaviyo setup guide for Shopify: connect the integration, authenticate your domain, add consent forms and launch welcome, abandoned cart, browse, post-purchase and win-back flows.">
 <meta name="twitter:image" content="https://tehseenarbab.com/og-image.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131109'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23D4F24E' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231D4A37'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23F4EFE4' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "How to set up Klaviyo for a Shopify store: the first five flows to build", "description": "A step-by-step Klaviyo setup guide for Shopify: connect the integration, authenticate your domain, add consent forms and launch welcome, abandoned cart, browse, post-purchase and win-back flows.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://tehseenarbab.com/blog/klaviyo-setup-shopify-first-flows/", "image": "https://tehseenarbab.com/og-image.png", "author": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/", "sameAs": ["https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/"]}, "publisher": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tehseenarbab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tehseenarbab.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to set up Klaviyo for a Shopify store: the first five flows to build", "item": "https://tehseenarbab.com/blog/klaviyo-setup-shopify-first-flows/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I connect Klaviyo to Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "In Klaviyo, add the Shopify integration from the integrations area and approve the connection. Then place a test order and confirm that Placed Order and product events appear on the customer profile."}}, {"@type": "Question", "name": "What flows should I set up first in Klaviyo?", "acceptedAnswer": {"@type": "Answer", "text": "Start with a welcome series, abandoned cart, browse abandonment, post-purchase and a win-back or replenishment flow. These cover the main moments when a customer is most likely to buy."}}, {"@type": "Question", "name": "How long should I wait before sending an abandoned cart email?", "acceptedAnswer": {"@type": "Answer", "text": "A common starting point is about an hour after the cart is abandoned, then a second message around a day later and a third a day or two after that. Test timing against your own revenue per recipient."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/base.css">
 <link rel="stylesheet" href="/blog/blog.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="topbar"><div class="topbar-in">
-<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span></a>
+<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span><span class="brand-name">Tehseen Arbab</span></a>
 <nav class="topnav" id="topnav" aria-label="Main navigation">
-<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/blog/">Blog</a><a href="/#about">About</a>
+<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/#about">About</a><a href="/blog/">Blog</a>
 <a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a>
 <a href="/#contact" class="btn btn-primary">Free retention audit</a>
 </nav>
-<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">Menu</button>
+<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu"><span></span><span></span></button>
 </div></header>
 
-<main class="page"><div class="wrap">
+<main class="page" id="main"><div class="wrap">
 <p class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Klaviyo</p>
 <div class="post-head">
 <span class="kicker">Klaviyo</span>
 <h1>How to set up Klaviyo for a Shopify store: the first five flows to build</h1>
-<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span>·</span><time datetime="2026-10-23">Oct 23, 2026</time><span>·</span><span>9 min read</span></div>
+<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span class="sep">·</span><time datetime="2026-10-23">Oct 23, 2026</time><span class="sep">·</span><span>9 min read</span></div>
 </div>
 <div class="layout">
 <article class="prose">
@@ -96,13 +98,17 @@
 <section class="related"><h2>Keep reading</h2><div class="cards"><a class="card" href="/blog/klaviyo-vs-mailchimp-shopify/"><span class="k">Klaviyo</span><h3>Klaviyo vs Mailchimp for Shopify: which should an ecommerce brand use?</h3><p>Klaviyo or Mailchimp for a Shopify store? A practical comparison for ecommerce brands: purchase data, segmentation, automation, pricing model and when each tool makes sense.</p><span class="r">7 min read →</span></a><a class="card" href="/blog/email-deliverability-checklist/"><span class="k">Email marketing</span><h3>Email deliverability checklist: how to keep your marketing emails out of spam</h3><p>A practical email deliverability checklist for ecommerce brands: SPF, DKIM, DMARC, Gmail and Yahoo sender rules, list hygiene, engagement-based sending and how to monitor spam complaints.</p><span class="r">8 min read →</span></a><a class="card" href="/blog/klaviyo-replenishment-flow/"><span class="k">Klaviyo</span><h3>How to build a Klaviyo replenishment flow that matches how fast customers actually run out</h3><p>Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.</p><span class="r">9 min read →</span></a></div></section>
 </div></main>
 <footer class="foot"><div class="foot-in wrap">
-<span>© 2026 Tehseen Arbab — Bahawalpur, Pakistan</span>
+<span class="fl">Tehseen Arbab</span>
 <span><a href="/">Home</a><a href="/blog/">Blog</a><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a><a href="mailto:contact@tehseenarbab.com">Email</a></span>
+<span>© 2026 · Bahawalpur, Pakistan</span>
 </div></footer>
 <script>
 (function(){var t=document.querySelector(".nav-toggle"),n=document.getElementById("topnav");
-t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.textContent=o?"Close":"Menu"});
-n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="Menu"})});})();
+function set(o){n.classList.toggle("open",o);t.setAttribute("aria-expanded",o?"true":"false");document.body.style.overflow=o?"hidden":""}
+t.addEventListener("click",function(){set(!n.classList.contains("open"))});
+n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){set(false)})});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
+window.addEventListener("resize",function(){if(innerWidth>820)set(false)});})();
 </script>
 </body>
 </html>
