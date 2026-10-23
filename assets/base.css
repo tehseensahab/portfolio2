@@ -60,7 +60,9 @@ p{margin:0}
 .btn-row{display:flex;flex-wrap:wrap;gap:12px}
 
 /* ============ Header ============ */
-.topbar{position:sticky;top:0;z-index:60;background:rgba(244,239,228,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar{position:sticky;top:0;z-index:60;border-bottom:1px solid var(--line)}
+/* blur lives on a pseudo-element: backdrop-filter on the header itself would trap the fixed mobile menu inside it */
+.topbar::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(244,239,228,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .topbar-in{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);padding:0 var(--edge);max-width:calc(var(--max) + 2*var(--edge));margin:0 auto}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
 .mark{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--green);color:var(--on-green);font-family:var(--display);font-size:1rem;font-weight:500;letter-spacing:0}
