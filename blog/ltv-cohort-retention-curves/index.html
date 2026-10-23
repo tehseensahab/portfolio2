@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LTV and Cohort Retention Curves: How DTC Brands Should Read Them</title>
+<meta name="description" content="Learn to build and read cohort retention tables for DTC brands: repeat rate, payback period, LTV formula and the mistakes that make blended averages misleading.">
+<link rel="canonical" href="https://tehseenarbab.com/blog/ltv-cohort-retention-curves/">
+<meta name="author" content="Tehseen Arbab">
+<meta name="theme-color" content="#131109">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tehseen Arbab">
+<meta property="og:title" content="LTV and Cohort Retention Curves: How DTC Brands Should Read Them">
+<meta property="og:description" content="Learn to build and read cohort retention tables for DTC brands: repeat rate, payback period, LTV formula and the mistakes that make blended averages misleading.">
+<meta property="og:url" content="https://tehseenarbab.com/blog/ltv-cohort-retention-curves/">
+<meta property="og:image" content="https://tehseenarbab.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LTV and Cohort Retention Curves: How DTC Brands Should Read Them">
+<meta name="twitter:description" content="Learn to build and read cohort retention tables for DTC brands: repeat rate, payback period, LTV formula and the mistakes that make blended averages misleading.">
+<meta name="twitter:image" content="https://tehseenarbab.com/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131109'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23D4F24E' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "LTV and cohort retention curves: how DTC brands should read them", "description": "Learn to build and read cohort retention tables for DTC brands: repeat rate, payback period, LTV formula and the mistakes that make blended averages misleading.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://tehseenarbab.com/blog/ltv-cohort-retention-curves/", "image": "https://tehseenarbab.com/og-image.png", "author": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/", "sameAs": ["https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/"]}, "publisher": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tehseenarbab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tehseenarbab.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "LTV and cohort retention curves: how DTC brands should read them", "item": "https://tehseenarbab.com/blog/ltv-cohort-retention-curves/"}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span></a>
+<nav class="topnav" id="topnav" aria-label="Main navigation">
+<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/blog/">Blog</a><a href="/#about">About</a>
+<a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a>
+<a href="/#contact" class="btn btn-primary">Free retention audit</a>
+</nav>
+<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">Menu</button>
+</div></header>
+
+<main class="page"><div class="wrap">
+<p class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Analytics</p>
+<div class="post-head">
+<span class="kicker">Analytics</span>
+<h1>LTV and cohort retention curves: how DTC brands should read them</h1>
+<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span>·</span><time datetime="2026-10-23">Oct 23, 2026</time><span>·</span><span>8 min read</span></div>
+</div>
+<div class="layout">
+<article class="prose">
+<p class="lede">"Our repeat rate is 30%" sounds like an answer but tells you almost nothing. Cohort analysis shows whether customers acquired in different months actually behave better or worse over time, which is the only way to know if retention work is paying off.</p>
+
+<h2 id="what-a-cohort-is">What a cohort is</h2>
+<p>A cohort is a group of customers who made their first purchase in the same period, usually a month. You follow each group over the months after that first order and record how many of them buy again.</p>
+
+<h2 id="how-to-build-a-simple-cohort-table">How to build a simple cohort table</h2>
+<ol>
+<li>Export orders with customer ID, order date and order value.</li>
+<li>Label each customer with the month of their <strong>first</strong> order.</li>
+<li>For every later month, count how many customers from each cohort placed an order (and, optionally, how much revenue they generated).</li>
+<li>Divide by the cohort size to get a percentage.</li>
+</ol>
+<p>An illustrative result (made-up numbers to show the shape, not benchmarks):</p>
+<table>
+<thead><tr><th>First-order month</th><th>Customers</th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr></thead>
+<tbody>
+<tr><td>January</td><td>1,000</td><td>18%</td><td>12%</td><td>10%</td></tr>
+<tr><td>February</td><td>1,100</td><td>20%</td><td>14%</td><td>12%</td></tr>
+<tr><td>March</td><td>1,200</td><td>24%</td><td>17%</td><td>—</td></tr>
+</tbody></table>
+<p>Read it row by row. Here, each newer cohort returns more often than the one before it. That pattern, not the blended average, is evidence that something you changed is working.</p>
+
+<h2 id="read-the-shape-of-the-curve">Read the shape of the curve</h2>
+<ul>
+<li><strong>Steep early drop, then flat:</strong> normal. The customers who stay after the first reorder tend to keep ordering.</li>
+<li><strong>A bump at a specific month:</strong> often your product's replenishment point. If the bump arrives later than the product's days of supply, your reminder timing is probably late.</li>
+<li><strong>Continuous decline with no floor:</strong> customers are not forming a habit. Look at onboarding, product education and subscription uptake.</li>
+</ul>
+
+<h2 id="split-subscribers-from-one-time-buyers">Split subscribers from one-time buyers</h2>
+<p>Subscribers and one-time buyers behave very differently, so analyze them separately. A healthy blended number can hide a subscriber base that is shrinking, or a one-time group that never returns. The same applies by product and by acquisition channel.</p>
+
+<h2 id="a-simple-ltv-formula">A simple LTV formula</h2>
+<p class="formula">LTV ≈ average order value × gross margin % × expected number of orders per customer</p>
+<p>Use observed cohort data for the number of orders, and be conservative about extrapolating. Compare the result with your customer acquisition cost to get <strong>LTV : CAC</strong> and the <strong>payback period</strong> — how many months of gross profit it takes to recover the acquisition spend.</p>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Using blended averages that mix old and new customers.</li>
+<li>Counting revenue instead of gross profit when judging payback.</li>
+<li>Comparing a young cohort against an older one before it has had time to reorder.</li>
+<li>Ignoring seasonality and promotions that pull in one-time deal seekers.</li>
+</ul>
+<p>Once you can see cohorts, you can test changes properly. Pair this with the <a href="/blog/klaviyo-replenishment-flow/">replenishment flow</a> and check the whole system against the <a href="/blog/dtc-retention-marketing-guide/">retention playbook</a>.</p>
+<aside class="cta-box">
+<p class="cta-title">Need a cohort and LTV view for your brand?</p>
+<p>I'll review your Klaviyo flows, segments and subscription setup and send back the highest-impact fixes — free, no obligation.</p>
+<p><a class="btn btn-primary" href="/#contact">Get your free retention audit <span class="arr">→</span></a> <a class="btn btn-ghost" href="https://cal.com/tehseenarbab/15min" target="_blank" rel="noopener">Book a 15-min call</a></p>
+</aside>
+
+<div class="author"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="96" height="96" loading="lazy"><div>
+<h3>Tehseen Arbab</h3>
+<p>Retention and lifecycle marketer for DTC supplement and coffee brands. I led retention for a supplement brand whose monthly run-rate grew from about $500K to $700K, and I work in Klaviyo, Skio, Recharge, Meta Ads and Shopify.</p>
+<p><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">Connect on LinkedIn</a> · <a href="/#contact">Get a free audit</a></p></div></div>
+</article>
+<aside class="side">
+<nav class="toc" aria-label="Table of contents"><b>On this page</b><a href="#what-a-cohort-is">What a cohort is</a><a href="#how-to-build-a-simple-cohort-table">How to build a simple cohort table</a><a href="#read-the-shape-of-the-curve">Read the shape of the curve</a><a href="#split-subscribers-from-one-time-buyers">Split subscribers from one-time buyers</a><a href="#a-simple-ltv-formula">A simple LTV formula</a><a href="#common-mistakes">Common mistakes</a></nav>
+<div class="side-card"><p>Get a free review of your Klaviyo flows and subscription setup.</p><a class="btn btn-primary" href="/#contact">Free retention audit →</a></div>
+</aside>
+</div>
+<section class="related"><h2>Keep reading</h2><div class="cards"><a class="card" href="/blog/dtc-retention-marketing-guide/"><span class="k">Pillar guide</span><h3>DTC retention marketing: the playbook for supplement and coffee brands</h3><p>A practical retention marketing playbook for DTC brands that sell consumables: replenishment timing, subscriptions, Klaviyo lifecycle flows and the metrics that prove it works.</p><span class="r">11 min read →</span></a><a class="card" href="/blog/klaviyo-replenishment-flow/"><span class="k">Klaviyo</span><h3>How to build a Klaviyo replenishment flow that matches how fast customers actually run out</h3><p>Step-by-step guide to a Klaviyo replenishment flow for supplements and coffee: calculate days of supply, set the trigger and delays, exclude subscribers and measure second-order rate.</p><span class="r">9 min read →</span></a><a class="card" href="/blog/klaviyo-audit-checklist/"><span class="k">Klaviyo</span><h3>Klaviyo audit checklist: 15 things to check before you build anything new</h3><p>A practical Klaviyo audit checklist for ecommerce brands covering tracking, deliverability, flows, segments, campaigns and reporting, so you fix the biggest leaks first.</p><span class="r">9 min read →</span></a></div></section>
+</div></main>
+<footer class="foot"><div class="foot-in wrap">
+<span>© 2026 Tehseen Arbab — Bahawalpur, Pakistan</span>
+<span><a href="/">Home</a><a href="/blog/">Blog</a><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a><a href="mailto:contact@tehseenarbab.com">Email</a></span>
+</div></footer>
+<script>
+(function(){var t=document.querySelector(".nav-toggle"),n=document.getElementById("topnav");
+t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.textContent=o?"Close":"Menu"});
+n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="Menu"})});})();
+</script>
+</body>
+</html>

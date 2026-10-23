@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Deliverability Checklist: How to Stay Out of Spam in 2026</title>
+<meta name="description" content="A practical email deliverability checklist for ecommerce brands: SPF, DKIM, DMARC, Gmail and Yahoo sender rules, list hygiene, engagement-based sending and how to monitor spam complaints.">
+<link rel="canonical" href="https://tehseenarbab.com/blog/email-deliverability-checklist/">
+<meta name="author" content="Tehseen Arbab">
+<meta name="theme-color" content="#131109">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tehseen Arbab">
+<meta property="og:title" content="Email Deliverability Checklist: How to Stay Out of Spam in 2026">
+<meta property="og:description" content="A practical email deliverability checklist for ecommerce brands: SPF, DKIM, DMARC, Gmail and Yahoo sender rules, list hygiene, engagement-based sending and how to monitor spam complaints.">
+<meta property="og:url" content="https://tehseenarbab.com/blog/email-deliverability-checklist/">
+<meta property="og:image" content="https://tehseenarbab.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Email Deliverability Checklist: How to Stay Out of Spam in 2026">
+<meta name="twitter:description" content="A practical email deliverability checklist for ecommerce brands: SPF, DKIM, DMARC, Gmail and Yahoo sender rules, list hygiene, engagement-based sending and how to monitor spam complaints.">
+<meta name="twitter:image" content="https://tehseenarbab.com/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23131109'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23D4F24E' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Email deliverability checklist: how to keep your marketing emails out of spam", "description": "A practical email deliverability checklist for ecommerce brands: SPF, DKIM, DMARC, Gmail and Yahoo sender rules, list hygiene, engagement-based sending and how to monitor spam complaints.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://tehseenarbab.com/blog/email-deliverability-checklist/", "image": "https://tehseenarbab.com/og-image.png", "author": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/", "sameAs": ["https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/"]}, "publisher": {"@type": "Person", "name": "Tehseen Arbab", "url": "https://tehseenarbab.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tehseenarbab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tehseenarbab.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Email deliverability checklist: how to keep your marketing emails out of spam", "item": "https://tehseenarbab.com/blog/email-deliverability-checklist/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How can I improve email deliverability?", "acceptedAnswer": {"@type": "Answer", "text": "Authenticate your domain with SPF, DKIM and DMARC, send to engaged subscribers, remove invalid and long-inactive addresses, make unsubscribing easy and keep spam complaints very low."}}, {"@type": "Question", "name": "Do spam trigger words still matter?", "acceptedAnswer": {"@type": "Answer", "text": "Far less than people think. Inbox providers weigh authentication, sender reputation, engagement and complaints much more heavily than individual words, though misleading subject lines still hurt trust."}}, {"@type": "Question", "name": "What spam complaint rate is acceptable?", "acceptedAnswer": {"@type": "Answer", "text": "Google advises keeping the spam rate reported in Postmaster Tools under 0.10% and never reaching 0.30%. Staying well below those thresholds protects your inbox placement."}}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog.css">
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+<a href="/" class="brand" aria-label="Tehseen Arbab — home"><span class="mark">TA</span></a>
+<nav class="topnav" id="topnav" aria-label="Main navigation">
+<a href="/#services">Services</a><a href="/#cases">Results</a><a href="/blog/">Blog</a><a href="/#about">About</a>
+<a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a>
+<a href="/#contact" class="btn btn-primary">Free retention audit</a>
+</nav>
+<button class="nav-toggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">Menu</button>
+</div></header>
+
+<main class="page"><div class="wrap">
+<p class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Email marketing</p>
+<div class="post-head">
+<span class="kicker">Email marketing</span>
+<h1>Email deliverability checklist: how to keep your marketing emails out of spam</h1>
+<div class="meta"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="44" height="44"><span>By <b>Tehseen Arbab</b></span><span>·</span><time datetime="2026-10-23">Oct 23, 2026</time><span>·</span><span>8 min read</span></div>
+</div>
+<div class="layout">
+<article class="prose">
+<p class="lede">Deliverability is whether your emails reach the inbox. It is decided far more by <strong>who you send to and how they react</strong> than by clever wording. Work through this checklist in order.</p>
+
+<h2 id="1-authenticate-your-domain">1. Authenticate your domain</h2>
+<ul>
+<li><strong>SPF</strong> tells receivers which servers may send for your domain.</li>
+<li><strong>DKIM</strong> signs messages so tampering can be detected.</li>
+<li><strong>DMARC</strong> tells receivers what to do when SPF or DKIM fails, and gives you reports.</li>
+</ul>
+<p>Use a dedicated sending domain or subdomain on your brand, not a shared default, so your reputation is your own.</p>
+
+<h2 id="2-meet-the-gmail-and-yahoo-bulk-sender-rules">2. Meet the Gmail and Yahoo bulk-sender rules</h2>
+<p>Large mailbox providers set requirements for senders who email in volume: authenticated mail, a one-click unsubscribe in marketing messages, prompt handling of unsubscribe requests and spam complaint rates kept low. Review each provider's current sender guidelines, because the thresholds are enforced and updated over time.</p>
+
+<h2 id="3-send-to-people-who-want-your-email">3. Send to people who want your email</h2>
+<ul>
+<li>Use clear consent at sign-up. Never buy or rent lists.</li>
+<li>Send most campaigns to engaged segments (for example, people who opened or clicked recently, or who purchased).</li>
+<li>Run a sunset policy: reduce or stop sending to contacts who have not engaged for a long period, with a final "still interested?" attempt first.</li>
+</ul>
+
+<h2 id="4-keep-the-list-clean">4. Keep the list clean</h2>
+<p>Suppress hard bounces and invalid addresses automatically, remove obvious typos and role accounts that never engage, and watch for sudden spikes in sign-ups from bots. Cleaning also lowers your platform bill.</p>
+
+<h2 id="5-warm-up-new-domains-and-big-sends-gradually">5. Warm up new domains and big sends gradually</h2>
+<p>A new domain, or a long-dormant one, has no reputation. Start with your most engaged contacts, increase volume steadily over a few weeks, and avoid sudden jumps from a few hundred to your whole list.</p>
+
+<h2 id="6-make-content-match-expectations">6. Make content match expectations</h2>
+<ul>
+<li>Subject lines that reflect the email, not bait.</li>
+<li>A recognizable "from" name and address.</li>
+<li>A sensible text-to-image balance and working links.</li>
+<li>A visible unsubscribe link. An easy exit is better than a spam complaint.</li>
+</ul>
+
+<h2 id="7-monitor-do-not-guess">7. Monitor, do not guess</h2>
+<ul>
+<li>Check <strong>Google Postmaster Tools</strong> for domain reputation and spam rate.</li>
+<li>Track bounce, unsubscribe and complaint rates by campaign.</li>
+<li>Judge success by clicks, conversions and revenue per recipient. Open rates are distorted by privacy features; see <a href="/blog/email-open-rate-benchmarks/">why open rate is a weak metric</a>.</li>
+</ul>
+
+<h2 id="when-emails-land-in-spam-anyway">When emails land in spam anyway</h2>
+<p>Stop sending to cold segments, confirm authentication still passes, check for a recent list import or a spike in complaints, and resume with your most engaged contacts. Include deliverability in a regular <a href="/blog/klaviyo-audit-checklist/">account audit</a>, and make sure your <a href="/blog/klaviyo-setup-shopify-first-flows/">initial setup</a> covered the foundations.</p>
+<h2 id="quick-answers">Quick answers</h2><h3>How can I improve email deliverability?</h3><p>Authenticate your domain with SPF, DKIM and DMARC, send to engaged subscribers, remove invalid and long-inactive addresses, make unsubscribing easy and keep spam complaints very low.</p><h3>Do spam trigger words still matter?</h3><p>Far less than people think. Inbox providers weigh authentication, sender reputation, engagement and complaints much more heavily than individual words, though misleading subject lines still hurt trust.</p><h3>What spam complaint rate is acceptable?</h3><p>Google advises keeping the spam rate reported in Postmaster Tools under 0.10% and never reaching 0.30%. Staying well below those thresholds protects your inbox placement.</p><aside class="cta-box">
+<p class="cta-title">Emails landing in spam or promotions?</p>
+<p>I'll review your Klaviyo flows, segments and subscription setup and send back the highest-impact fixes — free, no obligation.</p>
+<p><a class="btn btn-primary" href="/#contact">Get your free retention audit <span class="arr">→</span></a> <a class="btn btn-ghost" href="https://cal.com/tehseenarbab/15min" target="_blank" rel="noopener">Book a 15-min call</a></p>
+</aside>
+
+<div class="author"><img src="/tehseen-square.jpg" alt="Tehseen Arbab" width="96" height="96" loading="lazy"><div>
+<h3>Tehseen Arbab</h3>
+<p>Retention and lifecycle marketer for DTC supplement and coffee brands. I led retention for a supplement brand whose monthly run-rate grew from about $500K to $700K, and I work in Klaviyo, Skio, Recharge, Meta Ads and Shopify.</p>
+<p><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">Connect on LinkedIn</a> · <a href="/#contact">Get a free audit</a></p></div></div>
+</article>
+<aside class="side">
+<nav class="toc" aria-label="Table of contents"><b>On this page</b><a href="#1-authenticate-your-domain">1. Authenticate your domain</a><a href="#2-meet-the-gmail-and-yahoo-bulk-sender-rules">2. Meet the Gmail and Yahoo bulk-sender rules</a><a href="#3-send-to-people-who-want-your-email">3. Send to people who want your email</a><a href="#4-keep-the-list-clean">4. Keep the list clean</a><a href="#5-warm-up-new-domains-and-big-sends-gradually">5. Warm up new domains and big sends gradually</a><a href="#6-make-content-match-expectations">6. Make content match expectations</a><a href="#7-monitor-do-not-guess">7. Monitor, do not guess</a><a href="#when-emails-land-in-spam-anyway">When emails land in spam anyway</a><a href="#quick-answers">Quick answers</a></nav>
+<div class="side-card"><p>Get a free review of your Klaviyo flows and subscription setup.</p><a class="btn btn-primary" href="/#contact">Free retention audit →</a></div>
+</aside>
+</div>
+<section class="related"><h2>Keep reading</h2><div class="cards"><a class="card" href="/blog/klaviyo-setup-shopify-first-flows/"><span class="k">Klaviyo</span><h3>How to set up Klaviyo for a Shopify store: the first five flows to build</h3><p>A step-by-step Klaviyo setup guide for Shopify: connect the integration, authenticate your domain, add consent forms and launch welcome, abandoned cart, browse, post-purchase and win-back flows.</p><span class="r">9 min read →</span></a><a class="card" href="/blog/klaviyo-audit-checklist/"><span class="k">Klaviyo</span><h3>Klaviyo audit checklist: 15 things to check before you build anything new</h3><p>A practical Klaviyo audit checklist for ecommerce brands covering tracking, deliverability, flows, segments, campaigns and reporting, so you fix the biggest leaks first.</p><span class="r">9 min read →</span></a><a class="card" href="/blog/email-open-rate-benchmarks/"><span class="k">Email marketing</span><h3>What is a good email open rate, and why you should stop relying on it</h3><p>Open rates are inflated by Apple Mail Privacy Protection. Learn what to measure instead: click rate, conversion, revenue per recipient and list health for ecommerce email.</p><span class="r">6 min read →</span></a></div></section>
+</div></main>
+<footer class="foot"><div class="foot-in wrap">
+<span>© 2026 Tehseen Arbab — Bahawalpur, Pakistan</span>
+<span><a href="/">Home</a><a href="/blog/">Blog</a><a href="https://www.linkedin.com/in/tehseen-arbab-0b15aa1ab/" target="_blank" rel="noopener me">LinkedIn</a><a href="mailto:contact@tehseenarbab.com">Email</a></span>
+</div></footer>
+<script>
+(function(){var t=document.querySelector(".nav-toggle"),n=document.getElementById("topnav");
+t.addEventListener("click",function(){var o=n.classList.toggle("open");t.setAttribute("aria-expanded",o?"true":"false");t.textContent=o?"Close":"Menu"});
+n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="Menu"})});})();
+</script>
+</body>
+</html>
